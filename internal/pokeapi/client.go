@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/bootdotdev/pokedexcli/internal/pokecache"
+	"github.com/SpicyDataByte/pokedex/internal/pokecache"
 )
 
 // Client -
