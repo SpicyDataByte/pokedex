@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"testing"
 )
 
@@ -25,10 +26,17 @@ func TestCleanInput(t *testing.T) {
 			input:    "  HellO  World  ",
 			expected: []string{"hello", "world"},
 		},
+		{
+			input: "Donkey Kong",
+			expected: []string{"donkey", "kong"},
+		},
 	}
 
 	for _, c := range cases {
 		actual := cleanInput(c.input)
+		fmt.Println(" input:", c.input)
+		fmt.Println("  expected:", c.expected)
+		fmt.Println("  actual:  ", actual)
 		if len(actual) != len(c.expected) {
 			t.Errorf("lengths don't match: '%v' vs '%v'", actual, c.expected)
 			continue
